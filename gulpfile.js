@@ -6,6 +6,8 @@ const concat = require('gulp-concat');
 const uglify = require('gulp-uglify-es').default;
 const browserSync = require('browser-sync').create();
 const clean = require('gulp-clean');
+const rename = require('gulp-rename');
+const uglifycss = require('gulp-uglifycss');
 
 function prepareScripts(){
     return src([
@@ -22,11 +24,28 @@ function prepareScripts(){
 
 function prepareStyles() {
     return src('app/scss/*.scss', {base: 'app/scss'})
-    .pipe(concat('main.min.css', {base: }))
+    .pipe(rename({extname: ".css"}))
+    .pipe(scss())
+    .pipe(dest('app/css'))
+}
+
+function prepareStylesWithCompress() {
+    return src('app/scss/*.scss', {base: 'app/scss'})
+    .pipe(rename({extname: ".min.css"}))
     .pipe(scss({outputStyle: 'compressed'}))
     .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
+
+function prepareStylesCompressOnly() {
+    return src('app/css/slick.css')
+    .pipe(rename({extname: ".min.css"}))
+    .pipe(uglifycss())
+    .pipe(dest('app/css'))
+    .pipe(browserSync.stream())
+}
+
+
 
 function observe(){
     watch(['app/scss/*.scss'], prepareStyles)
@@ -62,25 +81,14 @@ function build(){
     .pipe(dest('dist'))
 }
 
-exports.styles = prepareStyles;
+exports.styles = parallel(prepareStyles, prepareStylesWithCompress, prepareStylesCompressOnly);
 exports.scripts = prepareScripts;
 exports.observe = observe;
 exports.browser = browserRefresh;
 exports.clean = cleanDist;
 
 exports.build = series(cleanDist, build);
-exports.default = series(prepareStyles, prepareScripts, browserRefresh, observe);
+exports.default = series(parallel(prepareStyles, prepareStylesWithCompress, prepareStylesCompressOnly, prepareScripts), browserRefresh, observe);
 
 
-/*
-https://www.npmjs.com/package/gulp-rename
-gulp.src("./src/**/hello.txt")
-.pipe(rename(function (path) {
-    // Returns a completely new object, make sure you return all keys needed!
-    return {
-      dirname: path.dirname + "/ciao",
-      basename: path.basename + "-goodbye",
-      extname: ".md"
-    };
-  }))
-*/
+
