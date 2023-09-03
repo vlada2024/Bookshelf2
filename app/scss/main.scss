@@ -1,12 +1,7 @@
+@import 'dark-theme';
 
 
 
-$black-color: #260E12;
-$white-color: #ffffff;
-$grey-color: #D9D7CC;
-$primary-color: #591E11;
-$analogous-color: #8C451C;
-$complementary-color: #D9BC9A;
 
 $page-header-background-color: $analogous-color;
 $page-body-background-color: $white-color;
@@ -50,6 +45,12 @@ $product-color-001: $analogous-color;
 $product-color-002: $primary-color;
 
 
+$space_x: 10px;
+$space_x2: $space_x * 2;
+
+$font_primary: 'Montserrat', sans-serif;
+$fond_secondary: '';
+
 *,
 *::after,
 *::before {
@@ -66,7 +67,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 15px;
-    
+    background-color: $white-color;
     color: $page-body-text-color;
 }
 
@@ -91,7 +92,7 @@ p{
 
 .container{
     max-width: 1220px;
-    padding: 0 10px;
+    padding: 0 $space_x;
     margin: 0 auto;
 }
 
@@ -109,7 +110,7 @@ p{
 .menu__item{
     margin-right: 20px;
     text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font_primary;
 }
 
 .menu__link{
@@ -351,6 +352,8 @@ p{
     padding-bottom: 10px;
     margin-bottom: 20px;
     outline: none;
+    background-color:$white-color ;
+    color: $black-color;
 }
 
 .form__input-name::placeholder,

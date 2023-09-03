@@ -1,3 +1,12 @@
+/*
+$black-color: #260E12;
+$white-color: #ffffff;
+$grey-color: #D9D7CC;
+$primary-color: #FA41B2;
+$analogous-color: #D95248;
+$complementary-color: #FCD153;
+
+*/
 *,
 *::after,
 *::before {
@@ -14,7 +23,8 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 15px;
-  color: #260E12;
+  background-color: #260E12;
+  color: #ffffff;
 }
 
 a {
@@ -68,8 +78,8 @@ p {
 }
 
 .menu__link:hover {
-  background-color: #591E11;
-  color: #ffffff;
+  background-color: #FF73B3;
+  color: #260E12;
 }
 
 .book {
@@ -87,12 +97,12 @@ p {
 
 .book__title {
   font-weight: 700;
-  color: #260E12;
+  color: #ffffff;
 }
 
 .book__subtitle {
   font-weight: 600;
-  color: #591E11;
+  color: #FF73B3;
   font-size: 19px;
 }
 
@@ -103,8 +113,8 @@ p {
 .book__link {
   margin-top: 40px;
   display: inline-block;
-  background-color: #591E11;
-  color: #ffffff;
+  background-color: #FF73B3;
+  color: #260E12;
   padding: 20px 80px;
   letter-spacing: 1.1em;
   text-transform: uppercase;
@@ -112,8 +122,8 @@ p {
 }
 
 .book__link:hover {
-  background-color: #8C451C;
-  color: #ffffff;
+  background-color: #FF9980;
+  color: #260E12;
 }
 
 .book__column-slider {
@@ -136,7 +146,7 @@ p {
   font-size: 0;
   padding: 0;
   border: none;
-  background-color: #D9BC9A;
+  background-color: #FFB561;
   width: 10px;
   height: 25px;
   border-radius: 10px;
@@ -144,11 +154,11 @@ p {
 }
 
 .slick-active button {
-  background-color: #591E11;
+  background-color: #FF73B3;
 }
 
 .slick-dots button:hover {
-  background-color: #8C451C;
+  background-color: #FF9980;
 }
 
 .info {
@@ -215,8 +225,8 @@ p {
 
 .book-details__title {
   padding: 3px 0 3px 5px;
-  color: #ffffff;
-  background-color: #591E11;
+  color: #260E12;
+  background-color: #FF73B3;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -224,7 +234,7 @@ p {
 .book-details__line {
   display: flex;
   padding-top: 5px;
-  color: #260E12;
+  color: #ffffff;
 }
 
 .book-details__name {
@@ -280,10 +290,12 @@ p {
 .form__input-phone {
   width: 100%;
   border: none;
-  border-bottom: 1px solid #591E11;
+  border-bottom: 1px solid #FF73B3;
   padding-bottom: 10px;
   margin-bottom: 20px;
   outline: none;
+  background-color: #260E12;
+  color: #ffffff;
 }
 
 .form__input-name::placeholder,
@@ -328,18 +340,18 @@ p {
 }
 
 .form__indicator--brown {
-  background: #591E11;
+  background: #FF73B3;
 }
 
 .form__indicator--yellow {
-  background: #8C451C;
+  background: #FF9980;
 }
 
 .form__button {
   margin-top: 40px;
   display: inline-block;
-  background-color: #591E11;
-  color: #ffffff;
+  background-color: #FF73B3;
+  color: #260E12;
   padding: 20px 80px;
   letter-spacing: 1.1em;
   text-transform: uppercase;
@@ -349,8 +361,8 @@ p {
 }
 
 .form__button:hover {
-  background-color: #8C451C;
-  color: #ffffff;
+  background-color: #FF9980;
+  color: #260E12;
 }
 
 .form__input-radio:checked + .form__book {
@@ -373,10 +385,10 @@ p {
   justify-content: center;
   align-items: center;
   font-size: 32px;
-  border: 1px solid #591E11;
+  border: 1px solid #FF73B3;
   border-radius: 50%;
   transform: translateX(-150%);
-  color: #260E12;
+  color: #ffffff;
 }
 
 .form__book-price::after {
@@ -387,12 +399,12 @@ p {
   left: 0;
   width: 220px;
   height: 100px;
-  border: 1px solid #591E11;
+  border: 1px solid #FF73B3;
   border-radius: 50%;
 }
 
 .footer {
-  background-color: #8C451C;
+  background-color: #FF9980;
 }
 
 .footer__inner {
@@ -408,7 +420,7 @@ p {
 }
 
 .footer__links-text, .footer__contacts-text {
-  color: #ffffff;
+  color: #260E12;
   font-size: 12px;
 }
 
