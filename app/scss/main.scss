@@ -1,4 +1,54 @@
-$dark-color: #000000;
+
+
+
+$black-color: #260E12;
+$white-color: #ffffff;
+$grey-color: #D9D7CC;
+$primary-color: #591E11;
+$analogous-color: #8C451C;
+$complementary-color: #D9BC9A;
+
+$page-header-background-color: $analogous-color;
+$page-body-background-color: $white-color;
+$page-body-text-color: $black-color;
+$page-footer-background-color: $analogous-color;
+$page-footer-text-color:$white-color;
+
+$menu-item-background-color: $page-body-background-color;
+$menu-item-text-color: $black-color;
+$menu-item-background-color-active: $primary-color;
+$menu-item-text-color-active: $white-color;
+
+$text-title-color: $black-color;
+$text-subtitle-color: $primary-color;
+
+
+$button-background-color: $primary-color;
+$button-text-color: $white-color;
+$button-background-color-active: $analogous-color;
+$button-text-color-active: $white-color;
+
+
+$dot-background-color: $complementary-color;
+$dot-background-color-active: $analogous-color;
+$dot-background-color-current: $primary-color;
+
+$table-title-background-color: $text-subtitle-color;
+$table-title-text: $white-color;
+$table-body-background-color: $page-body-background-color;
+$table-body-text: $black-color;
+
+$input-placeholder-color:$grey-color;
+
+
+
+
+
+$product-price-text-color:$black-color;
+$product-price-border-color:$primary-color;
+$product-color-001: $analogous-color;
+$product-color-002: $primary-color;
+
 
 *,
 *::after,
@@ -17,7 +67,7 @@ body{
     font-weight: 400;
     font-size: 15px;
     
-    color: $dark-color;
+    color: $page-body-text-color;
 }
 
 a{
@@ -75,8 +125,8 @@ p{
 }
 
 .menu__link:hover{
-    background-color: black;
-    color: aliceblue;
+    background-color: $menu-item-background-color-active;
+    color: $menu-item-text-color-active;
 }
 
 .book{
@@ -95,11 +145,12 @@ p{
 
 .book__title{
     font-weight: 700;
+    color: $text-title-color;
 }
 
 .book__subtitle{
     font-weight: 600;
-    color: #561616;
+    color: $text-subtitle-color;
     font-size: 19px;
     
 }
@@ -111,8 +162,8 @@ p{
 .book__link{
     margin-top: 40px;
     display: inline-block;
-    background-color: #561616;
-    color: aliceblue;
+    background-color: $button-background-color;
+    color: $button-text-color;
     padding: 20px 80px;
     letter-spacing: 1.1em;
     text-transform: uppercase;
@@ -120,7 +171,8 @@ p{
 }
 
 .book__link:hover{
-    background-color: #9b9696;
+    background-color: $button-background-color-active;
+    color: $button-text-color-active;
 }
 
 .book__column-slider{
@@ -144,7 +196,7 @@ p{
     font-size: 0;
     padding: 0;
     border: none;
-    background-color: #9b9696;
+    background-color: $dot-background-color;
     width: 10px;
     height: 25px;
     border-radius: 10px;
@@ -153,11 +205,11 @@ p{
 } 
 
 .slick-active button{
-    background-color: #561616;
+    background-color: $dot-background-color-current;
 }
 
 .slick-dots button:hover{
-    background-color: #561616;
+    background-color: $dot-background-color-active;
 }
 
 .info{
@@ -227,8 +279,8 @@ p{
 
 .book-details__title{
     padding: 3px 0 3px 5px;
-    color: #fff;
-    background-color: #561616;
+    color: $table-title-text;
+    background-color: $table-title-background-color;
     text-transform: uppercase;
     font-weight: 700;
 
@@ -237,6 +289,7 @@ p{
 .book-details__line{
     display: flex;
     padding-top: 5px;
+    color: $table-body-text;
 }
 
 .book-details__name{
@@ -294,20 +347,19 @@ p{
 .form__input-phone{
     width: 100%;
     border: none;
-    border-bottom: 1px solid #561616;
+    border-bottom: 1px solid $button-background-color;
     padding-bottom: 10px;
     margin-bottom: 20px;
     outline: none;
 }
 
 .form__input-name::placeholder,
-.form__input-phone::placeholder,
-.form__input-text{
-    color: #9b9696;
+.form__input-phone::placeholder {
+    color: $input-placeholder-color;
     opacity: 0.5;
 }
 
-.form__input-text{
+.form__text{
     margin-bottom: 10px;
 }
 
@@ -343,18 +395,18 @@ p{
 }
 
 .form__indicator--brown{
-    background: #561616;
+    background: $product-color-002;
 }
 
 .form__indicator--yellow{
-    background: #eef10b;
+    background: $product-color-001; 
 }
 
 .form__button{
     margin-top: 40px;
     display: inline-block;
-    background-color: #561616;
-    color: aliceblue;
+    background-color: $button-background-color;
+    color: $button-text-color;
     padding: 20px 80px;
     letter-spacing: 1.1em;
     text-transform: uppercase;
@@ -364,7 +416,8 @@ p{
 }
 
 .form__button:hover{
-    background-color: #9b9696;
+    background-color: $button-background-color-active;
+    color:$button-text-color-active;
 }
 
 
@@ -388,9 +441,10 @@ p{
     justify-content: center;
     align-items: center;
     font-size: 32px;
-    border: 1px solid #561616;
+    border: 1px solid $product-price-border-color;
     border-radius: 50%;
     transform: translateX(-150%);
+    color:$product-price-text-color;
 }
 
 .form__book-price::after{
@@ -401,12 +455,12 @@ p{
     left: 0;
     width: 220px;
     height: 100px;
-    border: 1px solid #561616;
-    border-radius: 50%;
+    border: 1px solid $product-price-border-color; 
+    border-radius: 50%; 
 }
 
 .footer{
-    background-color: #561616;
+    background-color:  $page-footer-background-color; 
 }
 
 .footer__inner{
@@ -422,7 +476,7 @@ p{
 }
 
 .footer__links-text, .footer__contacts-text{
-    color: #fff;
+    color: $page-footer-text-color;
     font-size: 12px;
 }
 

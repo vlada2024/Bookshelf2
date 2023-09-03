@@ -48,6 +48,7 @@ function prepareStylesCompressOnly() {
 
 
 function observe(){
+    watch(['app/scss/*.scss'], prepareStylesWithCompress)
     watch(['app/scss/*.scss'], prepareStyles)
     watch([
         'app/js/*.js', 
@@ -81,14 +82,14 @@ function build(){
     .pipe(dest('dist'))
 }
 
-exports.styles = parallel(prepareStyles, prepareStylesWithCompress, prepareStylesCompressOnly);
+exports.styles = series(prepareStyles, prepareStylesWithCompress, prepareStylesCompressOnly);
 exports.scripts = prepareScripts;
 exports.observe = observe;
 exports.browser = browserRefresh;
 exports.clean = cleanDist;
 
 exports.build = series(cleanDist, build);
-exports.default = series(parallel(prepareStyles, prepareStylesWithCompress, prepareStylesCompressOnly, prepareScripts), browserRefresh, observe);
+exports.default = series(prepareStyles, prepareStylesWithCompress, prepareStylesCompressOnly, prepareScripts, parallel(observe, browserRefresh));
 
 
 

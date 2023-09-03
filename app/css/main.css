@@ -14,7 +14,7 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 15px;
-  color: #000000;
+  color: #260E12;
 }
 
 a {
@@ -68,8 +68,8 @@ p {
 }
 
 .menu__link:hover {
-  background-color: black;
-  color: aliceblue;
+  background-color: #591E11;
+  color: #ffffff;
 }
 
 .book {
@@ -87,11 +87,12 @@ p {
 
 .book__title {
   font-weight: 700;
+  color: #260E12;
 }
 
 .book__subtitle {
   font-weight: 600;
-  color: #561616;
+  color: #591E11;
   font-size: 19px;
 }
 
@@ -102,8 +103,8 @@ p {
 .book__link {
   margin-top: 40px;
   display: inline-block;
-  background-color: #561616;
-  color: aliceblue;
+  background-color: #591E11;
+  color: #ffffff;
   padding: 20px 80px;
   letter-spacing: 1.1em;
   text-transform: uppercase;
@@ -111,7 +112,8 @@ p {
 }
 
 .book__link:hover {
-  background-color: #9b9696;
+  background-color: #8C451C;
+  color: #ffffff;
 }
 
 .book__column-slider {
@@ -134,7 +136,7 @@ p {
   font-size: 0;
   padding: 0;
   border: none;
-  background-color: #9b9696;
+  background-color: #D9BC9A;
   width: 10px;
   height: 25px;
   border-radius: 10px;
@@ -142,11 +144,11 @@ p {
 }
 
 .slick-active button {
-  background-color: #561616;
+  background-color: #591E11;
 }
 
 .slick-dots button:hover {
-  background-color: #561616;
+  background-color: #8C451C;
 }
 
 .info {
@@ -213,8 +215,8 @@ p {
 
 .book-details__title {
   padding: 3px 0 3px 5px;
-  color: #fff;
-  background-color: #561616;
+  color: #ffffff;
+  background-color: #591E11;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -222,6 +224,7 @@ p {
 .book-details__line {
   display: flex;
   padding-top: 5px;
+  color: #260E12;
 }
 
 .book-details__name {
@@ -277,20 +280,19 @@ p {
 .form__input-phone {
   width: 100%;
   border: none;
-  border-bottom: 1px solid #561616;
+  border-bottom: 1px solid #591E11;
   padding-bottom: 10px;
   margin-bottom: 20px;
   outline: none;
 }
 
 .form__input-name::placeholder,
-.form__input-phone::placeholder,
-.form__input-text {
-  color: #9b9696;
+.form__input-phone::placeholder {
+  color: #D9D7CC;
   opacity: 0.5;
 }
 
-.form__input-text {
+.form__text {
   margin-bottom: 10px;
 }
 
@@ -326,18 +328,18 @@ p {
 }
 
 .form__indicator--brown {
-  background: #561616;
+  background: #591E11;
 }
 
 .form__indicator--yellow {
-  background: #eef10b;
+  background: #8C451C;
 }
 
 .form__button {
   margin-top: 40px;
   display: inline-block;
-  background-color: #561616;
-  color: aliceblue;
+  background-color: #591E11;
+  color: #ffffff;
   padding: 20px 80px;
   letter-spacing: 1.1em;
   text-transform: uppercase;
@@ -347,7 +349,8 @@ p {
 }
 
 .form__button:hover {
-  background-color: #9b9696;
+  background-color: #8C451C;
+  color: #ffffff;
 }
 
 .form__input-radio:checked + .form__book {
@@ -370,9 +373,10 @@ p {
   justify-content: center;
   align-items: center;
   font-size: 32px;
-  border: 1px solid #561616;
+  border: 1px solid #591E11;
   border-radius: 50%;
   transform: translateX(-150%);
+  color: #260E12;
 }
 
 .form__book-price::after {
@@ -383,12 +387,12 @@ p {
   left: 0;
   width: 220px;
   height: 100px;
-  border: 1px solid #561616;
+  border: 1px solid #591E11;
   border-radius: 50%;
 }
 
 .footer {
-  background-color: #561616;
+  background-color: #8C451C;
 }
 
 .footer__inner {
@@ -404,7 +408,7 @@ p {
 }
 
 .footer__links-text, .footer__contacts-text {
-  color: #fff;
+  color: #ffffff;
   font-size: 12px;
 }
 
