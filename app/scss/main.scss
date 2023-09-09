@@ -1,4 +1,4 @@
-@import 'dark-theme';
+@import 'light-theme';
 
 
 
@@ -104,31 +104,42 @@ p{
 
 .menu__list{
     display: flex;
+    flex-direction: row;
     margin-right: 30px;
+    height: 60px; 
 }
 
 .menu__item{
-    margin-right: 20px;
     text-transform: uppercase;
     font-family: $font_primary;
+    display: flex;
+    align-items: center;
+    padding: 0 10px 0 10px;
+    &:hover{
+        background-color: $menu-item-background-color-active;
+        color: $menu-item-text-color-active;
+    }
 }
+
 
 .menu__link{
     //transition: all.3s;
 }
 
 .menu__item + .menu__item{
-    padding-left: 10px;
-}
-
-.logo__image{
-    width: 100px;
+    margin-left: 20px;
 }
 
 .menu__link:hover{
     background-color: $menu-item-background-color-active;
     color: $menu-item-text-color-active;
 }
+
+.logo__image{
+    width: 100px;
+}
+
+
 
 .book{
     margin: 100px 0 0;
