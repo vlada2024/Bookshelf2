@@ -1,4 +1,5 @@
 @import 'light-theme';
+@import 'less-1200';
 
 
 
@@ -51,6 +52,8 @@ $space_x2: $space_x * 2;
 $font_primary: 'Montserrat', sans-serif;
 $fond_secondary: '';
 
+
+
 *,
 *::after,
 *::before {
@@ -102,11 +105,18 @@ p{
     align-items: center;
 }
 
+.menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .menu__list{
     display: flex;
     flex-direction: row;
     margin-right: 30px;
     height: 60px; 
+    //background-color: green;
 }
 
 .menu__item{
@@ -115,20 +125,24 @@ p{
     display: flex;
     align-items: center;
     padding: 0 10px 0 10px;
+   
     &:hover{
         background-color: $menu-item-background-color-active;
         color: $menu-item-text-color-active;
     }
 }
 
-
-.menu__link{
-    //transition: all.3s;
-}
-
 .menu__item + .menu__item{
     margin-left: 20px;
 }
+
+
+.menu__link{
+    //transition: all.3s;
+    
+}
+
+
 
 .menu__link:hover{
     background-color: $menu-item-background-color-active;
@@ -510,3 +524,85 @@ p{
 .footer__contacts-link + .footer__contacts-link, .footer__links-link + .footer__links-link{
     margin-top: 10px;
 }
+
+.menu-button{
+    display: none;
+}
+
+ @media  (max-width: 599px) {
+    .menu__list{
+       // background-color: red;
+    }
+
+ }
+
+ @media  (max-width: 499px){
+
+
+    .menu-button{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 45px;
+        height: 30px;
+        background-color: $page-body-background-color;
+        border: 0;
+        cursor: pointer;
+        z-index: 4;
+    }
+
+    .menu-button__line{
+        background-color: $black-color;
+        width: 100%;
+        height: 3px;
+    }
+
+    .menu__list{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100vh;
+        z-index: 3;
+        margin-right: 0;
+        align-items: center;
+        padding-top: 15vh;
+    }
+
+    .menu__item{
+      
+        //background-color: red;
+        width: 100%;
+        
+    }
+
+    .menu__link{
+        padding: 20px 0;
+        font-size: 3vh;
+        display: block;
+       
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu__item + .menu__item{
+        margin: 0;
+    }
+
+    .menu__list--open{
+        display: flex;
+        
+    }
+    
+    .logo{
+        z-index: 4;
+    }
+ }
+
+/* $menu-item-background-color: $page-body-background-color;
+$menu-item-text-color: $black-color;
+$menu-item-background-color-active: $primary-color;
+$menu-item-text-color-active: $white-color;*/
